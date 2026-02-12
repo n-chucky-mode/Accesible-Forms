@@ -3,7 +3,7 @@
     
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Gloria Garcia" />
 <title>Test Page</title>
 
@@ -15,8 +15,8 @@
 
 <nav aria-label="Primary Navigation">
     <ul>
-        <li><a href="#contact-form">Form</a></Form></li>
-        <li><a href="comments">Comments</a></Form></li>
+        <li><a href="#contact-form">Form</a></li>
+        <li><a href="comments">Comments</a></li>
     </ul> 
 </nav>
 
@@ -40,7 +40,7 @@
       <label for="last-name">Last Name <span aria-hidden="true">*</span></label>
       <input
         id="last-name"
-        name="LastName"
+        name="lastName"
         type="text"
         autocomplete="family-name"
         required
@@ -61,7 +61,6 @@
         name="phone"
         type="tel"
         autocomplete="tel"
-        required
       />
       <!--preferred contact method-->
       <fieldset>
@@ -150,6 +149,8 @@
   rows="5"
   aria-labelledby="comments-label">
   </textarea>
+
+  <button type="submit">Submit</button>
 
   </form>
 
