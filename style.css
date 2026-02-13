@@ -142,3 +142,8 @@ button[type="submit"]{
 #contact-form{
     text-align: center;
 }
+/*oe very last thing to center the text under the contact form heading */
+ section > p{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
