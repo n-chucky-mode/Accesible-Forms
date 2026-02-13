@@ -51,13 +51,94 @@ footer{
 }
 /*large screen styles*/
 @media (min-width: 900px){
-    max-width: 800px;/*limits content width*/
-    margin: auto;/*centers content*/
+    main{
+        max-width: 800px;
+        margin: 0 auto;
+    }
 }
+
 
 /*x-large screen styles*/
 @media (min-width: 1200px){
     body{
         font-size: 1.1rem;/*slightly larger text*/
     }
+}
+
+/* -----------------ACCESSIBLE FORMS: CLEANUP FIXES (added by gg im sorry this is frankenstein code i know!) -----------------*/
+/* I am adding these at the bottom so I don't have to delete your original styles. */
+
+/* 1) Keep the page header/nav/footer centered, but let the form content align normally */
+main{
+    text-align: left; /* forms look better left-aligned, not centered */
+}
+
+/* 2) Constrain the content width so the form doesn't stretch across the whole screen */
+main{
+    max-width: 800px; /* matches what you tried to do in the 900px media query */
+    margin: 0 auto; /* centers the content area */
+}
+
+/* 3) Make the form area feel more like a centered "card" without changing the HTML */
+form{
+    max-width: 520px; /* keeps the form from getting too wide */
+    margin: 2rem auto; /* centers the form inside main */
+    padding: 1.5rem; /* gives breathing room */
+    border: 2px solid #ccc; /* simple form border like the example */
+    border-radius: 6px; /* subtle rounding */
+    background: #fff; /* keeps it clean */
+}
+
+/* 4) Stop the fieldset from becoming a giant stretched bar */
+fieldset{
+    max-width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+/* 5)behave more predictably inside layout */
+input, select, textarea{
+    box-sizing: border-box; /* prevents weird overflow width issues */
+}
+/* 6) Stack labels + fields vertically like the example */
+form label{
+    display: block; /* puts labels on their own line */
+    margin-top: 1rem; /* spacing between fields */
+    text-align: left; /* keeps label text consistent */
+}
+
+/* 7) Make inputs/select/textarea fill the form card width */
+form input,
+form select,
+form textarea{
+    display: block; /* forces them onto their own line */
+    width: 100%; /* makes them fill the card like the example */
+    margin-top: 0.35rem;
+    padding: 0.6rem;
+}
+
+/* 8) Keep radio buttons inline so they don't become huge */
+form input[type="radio"]{
+    display: inline-block;
+    width: auto;
+    margin-right: 0.35rem;
+}
+
+/* 9) Keep radio labels inline too */
+fieldset label{
+    display: inline-block;
+    margin: 0 1rem 0 0;
+}
+
+/* 10) Make the submit button full width like the example */
+button[type="submit"]{
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.9rem;
+    font-size: 1rem;
+}
+ /* one last thing ...Center only the Contact Form heading */
+#contact-form{
+    text-align: center;
 }
